@@ -17,7 +17,7 @@ function App(props) {
         >
           Learn React
         </a>
-        {props.saludos}
+        {props.children}
       </header>
     </div>
   );
