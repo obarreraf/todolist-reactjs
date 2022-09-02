@@ -7,7 +7,7 @@ import {TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 
 const todos = [
-  {text: 'hacer algo', completed: false},
+  {text: 'hacer algo', completed: true},
   {text: 'hacer mercado', completed: false},
   {text: 'Estudiar', completed: false},
 ]
