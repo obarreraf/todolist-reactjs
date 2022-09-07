@@ -7,6 +7,7 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { TodoForm } from '../TodoForm';
 import { Modal } from "../Modal";
+import { LoadingTodo} from "../LoadingTodo";
 
 function AppUI() {
   const {
@@ -25,7 +26,10 @@ function AppUI() {
       <TodoSearch />
 
       <TodoList>
-          {loading && <p>Estamos cargando...</p>}
+          {loading && 
+            new Array(4).fill().map((item, index)=>(
+              <LoadingTodo key={index} />
+          ))}
           {error && <p>Existe un error...</p>}
           {!loading && !searchedTodos.length && <p>¡Crea tu primer ToDo!</p>}
           
